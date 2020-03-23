@@ -85,8 +85,8 @@ if (empty($post)) {
           <p>
             <?php echo nl2br(h($post['body'])); ?>
           </p>
-            <?php if (($_SESSION['id']) && ($_SESSION['id'] == $post['user_id'])) : ?>
-              <a href="edit.php?id=<?php echo h($post['id']); ?>" class="btn btn-secondary">編集</a>
+          <?php if (($_SESSION['id']) && ($_SESSION['id'] == $post['user_id'])) : ?>
+          <a href="edit.php?id=<?php echo h($post['id']); ?>" class="btn btn-secondary">編集</a>
           <?php endif; ?>
           <a href="index.php" class="btn btn-info">戻る</a>
         </div>

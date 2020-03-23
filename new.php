@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->bindParam(':title', $title, PDO::PARAM_STR);
     $stmt->bindParam(':body', $body, PDO::PARAM_STR);
     $stmt->bindParam(':category_id', $category_id, PDO::PARAM_INT);
-    $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
+    $stmt->bindParam(':user_id', $user_id, PDO::PARAM_STR);
 
     $stmt->execute();
     $id = $dbh->lastInsertId();
@@ -90,7 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </nav>
     <div class="container">
       <div class="row">
-        <div class="col-sm-11 col-md-9 col-lg-7 mx-auto">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
           <div class="card card-signin my-5 bg-light">
             <div class="card-body">
               <h5 class="card-title text-center">新規記事</h5>
