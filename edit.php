@@ -5,7 +5,7 @@ require_once('functions.php');
 
 session_start();
 
-$id = $_GET['id'];
+$id = $_REQUEST['id'];
 if (!is_numeric($id)) {
   header('Location: index.php');
   exit;
@@ -126,7 +126,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                   <?php endforeach; ?>
                 </ul>
               <?php endif; ?>
-              <form action="new.php" method="post">
+              <form action="edit.php" method="post">
                 <div class="form-group">
                   <label for="title">タイトル</label>
                   <input type="text" name="title" id="" class="form-control" autofocus required value="<?php echo h($post['title']); ?>">
